@@ -4,37 +4,48 @@ import java.util.ArrayList;
 
 import Model.Cart;
 import Model.Product;
+import Service.CartService;
 import Service.UserService;
+import Factory.ShoppingCartFactory;
 
 public class UserServiceImpl implements UserService{
 
+	public String userName;
+	public String userPass;
+	CartService cartService = ShoppingCartFactory.getCart();
+	
+	public UserServiceImpl(String userName, String userPass) {
+		this.userName = userName;
+		this.userPass = userPass;
+	}
+
 	public void addCartProduct(Product product) {
-		// TODO Auto-generated method stub
 		
+		cartService.addProduct(product);
 	}
 
 	public void removeCartProduct(Product product) {
-		// TODO Auto-generated method stub
 		
+		cartService.removeProduct(product);
 	}
 
 	public Product selectProduct(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return cartService.getProduct(id);
 	}
 
 	public ArrayList<Product> showCart() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return cartService.CheckOut().getShoppingCart();
 	}
 
 	public int total() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return cartService.CheckOut().getTotalPrice();
 	}
 
 	public Cart goToPay() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return cartService.CheckOut();
 	}
 }
