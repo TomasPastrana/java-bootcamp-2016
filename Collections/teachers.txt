@@ -1,0 +1,22 @@
+db.teachers.insert(
+	[
+		{
+			"id_teacher": 1,
+			"first_name": "Ana",
+			"last_name": "Trenzo",
+			"date_of_birth": "1969-08-02 00:00:00"
+		},
+		{
+			"id_teacher": 2,
+			"first_name": "Rosa",
+			"last_name": "Perez",
+			"date_of_birth": "1980-09-05 00:00:00"
+		},
+		{
+			"id_teacher": 3,
+			"first_name": "Federico",
+			"last_name": "Daza",
+			"date_of_birth": "1975-04-23 00:00:00"
+		}
+	]
+)
