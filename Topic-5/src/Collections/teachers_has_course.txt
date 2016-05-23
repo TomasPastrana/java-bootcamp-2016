@@ -1,0 +1,16 @@
+db.teachers_has_course.insert(
+	[
+		{
+			"teachers_id_teacher": 1,
+			"course_id_course": 1
+		},
+		{
+			"teachers_id_teacher": 3,
+			"course_id_course": 2
+		},
+		{
+			"teachers_id_teacher": 2,
+			"course_id_course": 3
+		}
+	]
+)
