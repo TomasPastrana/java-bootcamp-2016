@@ -1,0 +1,16 @@
+db.course.insert(
+	[
+		{
+			"id_course": 1,
+			"course_name": "PHP"
+		},
+		{
+			"id_course": 2,
+			"course_name": "mySQL"
+		},
+		{
+			"id_course": 3,
+			"course_name": "JavaScript"
+		}
+	]
+)
